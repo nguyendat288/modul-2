@@ -13,7 +13,7 @@ public class EmailExampleTest {
         }
         for (String email : invalidEmail) {
             boolean isvalid = checkEmail.validate(email);
-            System.out.println("Email is " + email +     " is valid " + isvalid);
+            System.out.println("Email is " + email + " is valid " + isvalid);
         }
     }
 }

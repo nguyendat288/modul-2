@@ -106,7 +106,7 @@ public class QLDT {
             }
         }
     }
-    public static void removePhoneNumber(){
+    public static void removePhoneNumber()throws Exception{
         System.out.print(" Enter the phone number you want to remove : ");
         long sdt=Long.parseLong(sc.nextLine());
         for(int i=0;i<list.size();i++){
@@ -115,11 +115,7 @@ public class QLDT {
                 i--;
             }
         }
-        try {
-            ghiFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        ghiFile();
     }
     public static void findPhoneNumber(){
         System.out.print(" Enter the phone number you want to find : ");
