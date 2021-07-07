@@ -52,7 +52,20 @@ public class Main2 {
                     }
                     break;
                 case 6:
-                    QLNV.show();
+                    System.out.println("1.Hiển thị danh sách nhân viên FullTime");
+                    System.out.println("2.Hiển thị danh sách nhân viên PartTime");
+                    System.out.println("3.Hiển thị danh sách nhân viên");
+                    int y=Integer.parseInt(sc.nextLine());
+                    switch (y){
+                        case 1:
+                            QLNV.show1();
+                            break;
+                        case 2:QLNV.show2();
+                        break;
+                        case 3:
+                            QLNV.show();
+                            break;
+                    }
                     break;
                 case 7:
                     QLNV.showLuong();

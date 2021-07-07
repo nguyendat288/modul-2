@@ -25,8 +25,8 @@ public class NvPartTime extends NhanVien{
 
     @Override
     public String toString() {
-        return "NvPartTime{" +
-                "timework=" + timework +super.toString()+
+        return "NvPartTime{ " +super.toString()+
+                " timework = " + timework +
                 '}';
     }
 

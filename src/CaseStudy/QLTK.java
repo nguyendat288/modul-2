@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class QLTK {
     static Scanner sc = new Scanner(System.in);
 
-    static File file2 = new File("C:\\Users\\Admin\\Documents\\lap trinh Java\\Account.txt");
+    static File file2 = new File("./src/CaseStudy/Account.txt");
     static ArrayList<Account> list1 = docFile();
 
     //   ========================================================================
@@ -33,6 +33,9 @@ public class QLTK {
     public static ArrayList<Account> docFile() {
         ArrayList<Account> list2 = new ArrayList<>();
         try {
+            if(!file2.exists()){
+                file2.createNewFile();
+            }
             FileReader fileReader = new FileReader(file2);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             String line = "";

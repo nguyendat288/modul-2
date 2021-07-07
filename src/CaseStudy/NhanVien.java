@@ -30,7 +30,7 @@ public class NhanVien {
 
     @Override
     public String toString() {
-        return "NhanVien{" +"id ="+ id+
+        return "{ "+" id ="+ id+
                 ",name='" + name + '\'' +
                 ", age=" + age +
                 ", gender='" + gender + '\'' +
