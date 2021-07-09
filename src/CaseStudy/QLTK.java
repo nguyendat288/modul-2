@@ -68,8 +68,12 @@ public class QLTK {
     private static String getAccount() {
         while (true) {
             try {
+                String regex="^[a-zA-z0-9]\\w{0,}";
                 System.out.println("Nhập tên tài khoản: ");
                 String acc = sc.nextLine();
+                if(!acc.matches(regex)){
+                    throw new IllegalAccessException();
+                }
                 for (Account nv : list1) {
                     if (nv.getAcc().equals(acc))
                         throw new InterruptedException();
@@ -77,6 +81,8 @@ public class QLTK {
                 return acc;
             } catch (InterruptedException e) {
                 System.out.println("Đã tồn tại ");
+            }catch (IllegalAccessException e){
+                System.out.println("Lỗi !!!");
             }
         }
     }

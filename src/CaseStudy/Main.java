@@ -14,8 +14,7 @@ public class Main {
             System.out.println("2.đăng kí ");
             System.out.println("3.Xoá tài khoản ");
             System.out.println("4.Hiển thị tài khoản");
-            System.out.print("Lựa chọn của bạn : ");
-            int choise = Integer.parseInt(sc.nextLine());
+            int choise = ChoiseCondi.getChoise();
 
             switch (choise) {
                 case 1:
@@ -43,6 +42,9 @@ public class Main {
                     break;
                 case 4:
                     QLTK.show();
+                    break;
+                default:
+                    System.out.println("Không có lựa chọn này !!!");
                     break;
             }
         }

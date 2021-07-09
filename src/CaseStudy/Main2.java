@@ -19,7 +19,7 @@ public class Main2 {
             System.out.println("8.Sắp xếp nhân viên theo id ");
             System.out.println("9.Đăng xuất ");
             System.out.print("Nhập lựa chọn của bạn : ");
-            int choice = Integer.parseInt(sc.nextLine());
+            int choice = ChoiseCondi.getChoise();
             switch (choice){
                 case 1:
                     try {
@@ -55,7 +55,7 @@ public class Main2 {
                     System.out.println("1.Hiển thị danh sách nhân viên FullTime");
                     System.out.println("2.Hiển thị danh sách nhân viên PartTime");
                     System.out.println("3.Hiển thị danh sách nhân viên");
-                    int y=Integer.parseInt(sc.nextLine());
+                    int y=ChoiseCondi.getChoise();
                     switch (y){
                         case 1:
                             QLNV.show1();
@@ -64,6 +64,9 @@ public class Main2 {
                         break;
                         case 3:
                             QLNV.show();
+                            break;
+                        default:
+                            System.out.println("Không có lựa chọn này !!!");
                             break;
                     }
                     break;
@@ -79,6 +82,9 @@ public class Main2 {
                     break;
                 case 9:
                     Main.menuDanhap();
+                    break;
+                default:
+                    System.out.println("Không có lựa chọn này !!!");
                     break;
 
             }
