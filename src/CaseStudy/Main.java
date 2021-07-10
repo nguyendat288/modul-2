@@ -18,14 +18,17 @@ public class Main {
 
             switch (choise) {
                 case 1:
-                        if (QLTK.singIn() == true) {
+                    int choice = QLTK.singIn();
+                        if (choice == 1) {
+                            Main3.main2();
+                            break;
+                        } else if(choice == 2){
                             Main2.main1();
                             break;
-                        } else {
+                        }else {
                             System.out.println("Tài khoản hoặc mật khẩu không chính xác !!!");
                             break;
                         }
-
                 case 2 :
                     try {
                         QLTK.addAcount();

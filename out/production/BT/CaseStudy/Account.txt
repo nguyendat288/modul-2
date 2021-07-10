@@ -1,5 +1,2 @@
-2,2
-dat,dat
-a1,a1
-a2,a2
-2a,2a
+admin,admin,user
+viet,viet,admin

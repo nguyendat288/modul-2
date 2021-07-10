@@ -41,8 +41,8 @@ public class QLTK {
             String line = "";
             while ((line = bufferedReader.readLine()) != null) {
                 String[] str = line.split(",");
-                if (str.length >= 2) {
-                    list2.add(new Account(str[0], str[1]));
+                if (str.length >= 3) {
+                    list2.add(new Account(str[0], str[1],str[2]));
                 }
             }
 //            for(Account x:list2){
@@ -60,8 +60,27 @@ public class QLTK {
         String account = getAccount();
         System.out.println("Nhập mật khẩu ");
         String pass = sc.nextLine();
-        list1.add(new Account(account, pass));
+        String role=getRole1();
+        list1.add(new Account(account, pass,role));
         ghiFile(file2);
+    }
+    //============================================
+    public static String getRole1(){
+        while (true){
+            try{
+                System.out.println("Bạn là user hay admin ?");
+                String role=sc.nextLine();
+                if(role.equals("user")||role.equals("admin")){
+                    return role;
+                }else throw new InterruptedException();
+
+            }catch (InterruptedException e){
+                System.out.println("Sai định dạng !!!!");
+            }
+            catch (Exception e){
+                System.out.println("Sai định dạng !!!");
+            }
+        }
     }
 
     //    ==============================
@@ -101,25 +120,23 @@ public class QLTK {
     }
 //    ================================================
 
-    public static boolean singIn() {
+    public static int singIn() {
         System.out.print("Nhập tài khoản : ");
         String acc = sc.nextLine();
         System.out.print("Nhập mật khẩu : ");
         String pass = sc.nextLine();
         for (Account x : list1) {
             if (x.getAcc().equals(acc) && x.getPass().equals(pass)) {
-                return true;
+                if(x.getRole().equals("user")){
+                    return 1;
+                }else return 2;
             }
         }
-        return false;
-
+        return 3;
     }
-
     public static void show() {
         for (Account x : list1) {
             System.out.println(x.getAcc());
         }
     }
-
-
 }

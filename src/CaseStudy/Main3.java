@@ -3,55 +3,31 @@ package CaseStudy;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Main2 {
-    public static void main1() {
-        Scanner sc = new Scanner(System.in);
+public class Main3 {
+    public static void main2() {
         while (true) {
-            System.out.println("=====================//Quản lý nhân viên//===============");
+            System.out.println("=====================//Quản lý nhân viên//==================");
             System.out.println("==========================================================");
-            System.out.println("1.Thêm nhân viên ");
-            System.out.println("2.Xoá nhân viên theo id");
-            System.out.println("3.Sửa thông tin nhân viên theo id");
-            System.out.println("4.Kiểm tra thông tin nhân viên theo id");
-            System.out.println("5.Thay đổi trạng thái nhân viên theo id");
-            System.out.println("6.Hiển thị danh sách nhân viên");
-            System.out.println("7.Hiển thì lương theo id");
-            System.out.println("8.Sắp xếp nhân viên theo id ");
-            System.out.println("9.Tìm kiếm nhân viên theo tên");
-            System.out.println("10.Đăng xuất ");
+            System.out.println("1.Kiểm tra thông tin nhân viên theo id");
+            System.out.println("2.Thay đổi trạng thái nhân viên theo id");
+            System.out.println("3.Hiển thị danh sách nhân viên");
+            System.out.println("4.Hiển thì lương theo id");
+            System.out.println("5.Sắp xếp nhân viên theo id ");
+            System.out.println("6.Tìm kiếm nhân viên theo tên");
+            System.out.println("7.Đăng xuất ");
             int choice = ChoiseCondi.getChoise();
             switch (choice){
                 case 1:
-                    try {
-                        QLNV.addNhanVien();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    break;
-                case 2:
-                    try {
-                        QLNV.removeNhanVien();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    break;
-                case 3:
-                    try {
-                        QLNV.changeInfor();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    } break;
-                case 4:
                     QLNV.kiemTraInfor();
                     break;
-                case 5:
+                case 2:
                     try {
                         QLNV.changStatus();
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                     break;
-                case 6:
+                case 3:
                     System.out.println("1.Hiển thị danh sách nhân viên FullTime");
                     System.out.println("2.Hiển thị danh sách nhân viên PartTime");
                     System.out.println("3.Hiển thị danh sách nhân viên");
@@ -61,7 +37,7 @@ public class Main2 {
                             QLNV.show1();
                             break;
                         case 2:QLNV.show2();
-                        break;
+                            break;
                         case 3:
                             QLNV.show();
                             break;
@@ -70,20 +46,20 @@ public class Main2 {
                             break;
                     }
                     break;
-                case 7:
+                case 4:
                     QLNV.showLuong();
                     break;
-                case 8:
+                case 5:
                     try {
                         QLNV.sort();
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                     break;
-                case 9:
+                case 6:
                     QLNV.findbyName();
                     break;
-                case 10:
+                case 7:
                     Main.menuDanhap();
                     break;
                 default:

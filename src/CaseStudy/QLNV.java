@@ -225,6 +225,15 @@ public class QLNV {
         list.sort(Comparator.comparing(o -> ((NhanVien) o).getId()));
         ghiFile(file1);
     }
-
+//=======================================================
+    public static void findbyName(){
+        System.out.println("Nhập tên bạn muốn tìm kiếm ");
+        String name=sc.nextLine();
+        for(NhanVien tr:list){
+           if( tr.getName().contains(name)){
+               System.out.println(tr);
+           }
+        }
+    }
 
 }
