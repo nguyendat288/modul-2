@@ -151,10 +151,12 @@ public class QLNV {
             if (list.get(i).getId() == id) {
                 index=i;
                 if (list.get(i) instanceof NvPartTime) {
-                    list.set(i, addNV("part"));
+                    list.remove(i);
+                    list.add(i, addNV("part"));
                     break;
                 } else {
-                    list.set(i, addNV("full"));
+                    list.remove(i);
+                    list.add(i, addNV("full"));
                     break;
                 }
             }

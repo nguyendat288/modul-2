@@ -1,2 +1,3 @@
-admin,admin,user
 viet,viet,admin
+admin,admin,admin
+dat,dat,user
