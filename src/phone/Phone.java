@@ -1,24 +1,24 @@
-package com.company;
+package phone;
 
 public class Phone {
-    private long sdt;
+    private String sdt;
     private String group;
     private  String name;
     private String gender;
     private String address;
-    private int bird;
+    private int birth;
     private String email;
 
     public Phone() {
     }
 
-    public Phone(long sdt, String group, String name, String gender, String address, int bird, String email) {
+    public Phone(String sdt, String group, String name, String gender, String address, int birth, String email) {
         this.sdt = sdt;
         this.group = group;
         this.name = name;
         this.gender = gender;
         this.address = address;
-        this.bird = bird;
+        this.birth = birth;
         this.email = email;
     }
 
@@ -30,19 +30,19 @@ public class Phone {
                 ", name='" + name + '\'' +
                 ", gender='" + gender + '\'' +
                 ", address='" + address + '\'' +
-                ", bird=" + bird +
+                ", bird=" + birth +
                 ", email='" + email + '\'' +
                 '}';
     }
 
     public String ghi(){
-        return sdt +"," + group+","+name+","+gender+","+address+","+bird+","+email;
+        return sdt +"," + group+","+name+","+gender+","+address+","+birth+","+email;
 }
-    public long getSdt() {
+    public String getSdt() {
         return sdt;
     }
 
-    public void setSdt(long sdt) {
+    public void setSdt(String sdt) {
         this.sdt = sdt;
     }
 
@@ -79,11 +79,11 @@ public class Phone {
     }
 
     public int getBird() {
-        return bird;
+        return birth;
     }
 
     public void setBird(int bird) {
-        this.bird = bird;
+        this.birth = birth;
     }
 
     public String getEmail() {

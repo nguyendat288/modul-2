@@ -1,7 +1,5 @@
 package CaseStudy;
 
-import com.company.Phone;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -21,29 +19,28 @@ public class QLNV {
         int x = Integer.parseInt(sc.nextLine());
         switch (x) {
             case 1:
-                NhanVien nhanvien = addNV("part");
-                list.add(nhanvien);
+                list.add(addNVPartTime());
                 ghiFile(file1);
                 break;
             case 2:
-                nhanvien = addNV("full");
-                list.add(nhanvien);
+
+                list.add(addNVFullTime());
                 ghiFile(file1);
                 break;
         }
     }
 
     //=====================================================
-    public static NhanVien addNV(String type) {
+    public static NhanVien addNVPartTime() {
         System.out.print("Nhập tên : ");
         String name = sc.nextLine();
-        if (type.equals("part")) {
             return new NvPartTime(IdCondition.getId(), name, AgeCond.getAge(), GenderCond.getGender(), PhoneCondi.getPhone(), EmailCondition.getEmail(), StatusCondi.getStatus(), SalaryCondi.getSalary(), TimeWorkCondi.getTimeWork());
-        } else if (type.equals("full")) {
-            return new NvFullTime(IdCondition.getId(), name, AgeCond.getAge(), GenderCond.getGender(), PhoneCondi.getPhone(), EmailCondition.getEmail(), StatusCondi.getStatus(), SalaryCondi.getSalary());
-        } else return null;
     }
-
+    public static NhanVien addNVFullTime() {
+        System.out.print("Nhập tên : ");
+        String name = sc.nextLine();
+        return new NvFullTime(IdCondition.getId(), name, AgeCond.getAge(), GenderCond.getGender(), PhoneCondi.getPhone(), EmailCondition.getEmail(), StatusCondi.getStatus(), SalaryCondi.getSalary());
+    }
     // ===================================================
     public static void ghiFile(File file) throws IOException {
         BufferedWriter bufferedWriter = null;
@@ -75,12 +72,11 @@ public class QLNV {
             String line = "";
             while ((line = bufferedReader.readLine()) != null) {
                 String[] str = line.split(",");
-                if (str.length == 8) {
-//                    int id,String name, int age, String gender, String phone, String email,boolean status, int salary
-                    list1.add(new NvFullTime(Integer.parseInt(str[0]), str[1], Integer.parseInt(str[2]), str[3], str[4], str[5], Boolean.parseBoolean(str[6]), Integer.parseInt(str[7])));
-                }
                 if (str.length == 9) {
                     list1.add(new NvPartTime(Integer.parseInt(str[0]), str[1], Integer.parseInt(str[2]), str[3], str[4], str[5], Boolean.parseBoolean(str[6]), Integer.parseInt(str[7]),Integer.parseInt(str[8])));
+                }else if (str.length == 8) {
+//                    int id,String name, int age, String gender, String phone, String email,boolean status, int salary
+                    list1.add(new NvFullTime(Integer.parseInt(str[0]), str[1], Integer.parseInt(str[2]), str[3], str[4], str[5], Boolean.parseBoolean(str[6]), Integer.parseInt(str[7])));
                 }
             }
 //            for (NhanVien x : list1) {
@@ -91,37 +87,6 @@ public class QLNV {
             e.printStackTrace();
         }
         return list1;
-    }
-
-    //================================================
-    public static void show() {
-       for(NhanVien x:list){
-           System.out.println(x);
-       }
-    }
-    public static void show2() {
-        int index=-1;
-        for(int i=0;i<list.size();i++){
-            if (list.get(i).toString().contains("NvPartTime")) {
-                index=i;
-                System.out.println(list.get(i).toString());
-            }
-        }
-        if(index==-1){
-            System.out.println("Không có nhân viên PartTime nào !!!");
-        }
-    }
-    public static void show1() {
-        int index=-1;
-        for(int i=0;i<list.size();i++){
-            if (list.get(i).toString().contains("NvFullTime")) {
-                index=i;
-                System.out.println(list.get(i).toString());
-            }
-        }
-        if(index==-1){
-            System.out.println("Không có nhân viên FullTime nào !!!");
-        }
     }
     //================================================
     public static void removeNhanVien() throws Exception {
@@ -152,11 +117,11 @@ public class QLNV {
                 index=i;
                 if (list.get(i) instanceof NvPartTime) {
                     list.remove(i);
-                    list.add(i, addNV("part"));
+                    list.add(i, addNVPartTime());
                     break;
                 } else {
                     list.remove(i);
-                    list.add(i, addNV("full"));
+                    list.add(i, addNVFullTime());
                     break;
                 }
             }
@@ -237,5 +202,33 @@ public class QLNV {
            }
         }
     }
-
+    public static void show() {
+        for(NhanVien x:list){
+            System.out.println(x);
+        }
+    }
+    public static void show2() {
+        int index=-1;
+        for(int i=0;i<list.size();i++){
+            if (list.get(i).toString().contains("NvPartTime")) {
+                index=i;
+                System.out.println(list.get(i).toString());
+            }
+        }
+        if(index==-1){
+            System.out.println("Không có nhân viên PartTime nào !!!");
+        }
+    }
+    public static void show1() {
+        int index=-1;
+        for(int i=0;i<list.size();i++){
+            if (list.get(i).toString().contains("NvFullTime")) {
+                index=i;
+                System.out.println(list.get(i).toString());
+            }
+        }
+        if(index==-1){
+            System.out.println("Không có nhân viên FullTime nào !!!");
+        }
+    }
 }

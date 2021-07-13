@@ -9,16 +9,17 @@ public class Main2 {
         while (true) {
             System.out.println("=====================//Quản lý nhân viên//===============");
             System.out.println("==========================================================");
-            System.out.println("1.Thêm nhân viên ");
-            System.out.println("2.Xoá nhân viên theo id");
-            System.out.println("3.Sửa thông tin nhân viên theo id");
-            System.out.println("4.Kiểm tra thông tin nhân viên theo id");
-            System.out.println("5.Thay đổi trạng thái nhân viên theo id");
-            System.out.println("6.Hiển thị danh sách nhân viên");
-            System.out.println("7.Hiển thì lương theo id");
-            System.out.println("8.Sắp xếp nhân viên theo id ");
-            System.out.println("9.Tìm kiếm nhân viên theo tên");
-            System.out.println("10.Đăng xuất ");
+            System.out.println("|           1.Thêm nhân viên                              |");
+            System.out.println("|           2.Xoá nhân viên theo id                       |");
+            System.out.println("|           3.Sửa thông tin nhân viên theo id             |");
+            System.out.println("|           4.Kiểm tra thông tin nhân viên theo id        |");
+            System.out.println("|           5.Thay đổi trạng thái nhân viên theo id       |");
+            System.out.println("|           6.Hiển thị danh sách nhân viên                |");
+            System.out.println("|           7.Hiển thì lương theo id                      |");
+            System.out.println("|           8.Sắp xếp nhân viên theo id                   |");
+            System.out.println("|           9.Tìm kiếm nhân viên theo tên                 |");
+            System.out.println("|           10.Đăng xuất                                  |");
+            System.out.println("===========================================================");
             int choice = ChoiseCondi.getChoise();
             switch (choice){
                 case 1:

@@ -30,14 +30,13 @@ public class NhanVien {
 
     @Override
     public String toString() {
-        return "{ "+" id ="+ id+
+        return " id ="+ id+
                 ",name='" + name + '\'' +
                 ", age=" + age +
                 ", gender='" + gender + '\'' +
                 ", phone=" + phone +
                 ", email='" + email + '\'' +",status="+status+
-                ", salary=" + salary +
-                '}';
+                ", salary=" + salary;
     }
 public String ghi(){
         return id +","+name+","+age+","+gender+","+phone+","+email+","+status+","+salary;

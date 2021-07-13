@@ -13,7 +13,7 @@ public class NvFullTime extends NhanVien{
     }
     @Override
     public String toString() {
-        return "NvFullTime{  "
+        return "NvFullTime{"
                  + super.toString()+
                 '}';
     }

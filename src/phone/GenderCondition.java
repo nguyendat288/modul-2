@@ -1,8 +1,8 @@
-package com.company;
+package phone;
 
 public class GenderCondition extends Exception{
     @Override
     public String getMessage(){
-        return "Sai r";
+        return "Phải là nam hoặc nu";
     }
 }

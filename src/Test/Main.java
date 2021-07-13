@@ -1,7 +1,5 @@
 package Test;
 
-import com.company.QLDT;
-
 import java.util.Scanner;
 
 public class Main {

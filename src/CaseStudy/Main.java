@@ -9,11 +9,13 @@ public class Main {
     public static void menuDanhap() {
         Scanner sc = new Scanner(System.in);
         while (true) {
-            System.out.println("Hệ thống đăng nhập ");
-            System.out.println("1.Đăng nhập ");
-            System.out.println("2.đăng kí ");
-            System.out.println("3.Xoá tài khoản ");
-            System.out.println("4.Hiển thị tài khoản");
+            System.out.println("=================//Hệ thống đăng nhập//================");
+            System.out.println("=======================================================");
+            System.out.println("|                      1.Đăng nhập                    |");
+            System.out.println("|                      2.đăng kí                      |");
+            System.out.println("|                      3.Xoá tài khoản                |");
+            System.out.println("|                      4.Hiển thị tài khoản           |");
+            System.out.println("=======================================================");
             int choise = ChoiseCondi.getChoise();
 
             switch (choise) {

@@ -7,14 +7,15 @@ public class Main3 {
     public static void main2() {
         while (true) {
             System.out.println("=====================//Quản lý nhân viên//==================");
-            System.out.println("==========================================================");
-            System.out.println("1.Kiểm tra thông tin nhân viên theo id");
-            System.out.println("2.Thay đổi trạng thái nhân viên theo id");
-            System.out.println("3.Hiển thị danh sách nhân viên");
-            System.out.println("4.Hiển thì lương theo id");
-            System.out.println("5.Sắp xếp nhân viên theo id ");
-            System.out.println("6.Tìm kiếm nhân viên theo tên");
-            System.out.println("7.Đăng xuất ");
+            System.out.println("============================================================");
+            System.out.println("|          1.Kiểm tra thông tin nhân viên theo id           |");
+            System.out.println("|          2.Thay đổi trạng thái nhân viên theo id          |");
+            System.out.println("|          3.Hiển thị danh sách nhân viên                   |");
+            System.out.println("|          4.Hiển thì lương theo id                         |");
+            System.out.println("|          5.Sắp xếp nhân viên theo id                      |");
+            System.out.println("|          6.Tìm kiếm nhân viên theo tên                    |");
+            System.out.println("|          7.Đăng xuất                                      |");
+            System.out.println("=============================================================");
             int choice = ChoiseCondi.getChoise();
             switch (choice){
                 case 1:
@@ -28,9 +29,11 @@ public class Main3 {
                     }
                     break;
                 case 3:
-                    System.out.println("1.Hiển thị danh sách nhân viên FullTime");
-                    System.out.println("2.Hiển thị danh sách nhân viên PartTime");
-                    System.out.println("3.Hiển thị danh sách nhân viên");
+                    System.out.println("===============================================");
+                    System.out.println("|   1.Hiển thị danh sách nhân viên FullTime    |");
+                    System.out.println("|   2.Hiển thị danh sách nhân viên PartTime    |");
+                    System.out.println("|   3.Hiển thị danh sách nhân viên             |");
+                    System.out.println("================================================");
                     int y=ChoiseCondi.getChoise();
                     switch (y){
                         case 1:
